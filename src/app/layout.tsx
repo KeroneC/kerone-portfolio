@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kerone Creary Portfolio",
+  title: "Kerone Creary | Building What Matters",
   description:
-    "Personal developer portfolio for Kerone Creary, focused on .NET, SQL, and full-stack applications.",
+    "Software Developer focused on .NET, SQL, and full-stack applications.",
 };
 
 export default function RootLayout({
