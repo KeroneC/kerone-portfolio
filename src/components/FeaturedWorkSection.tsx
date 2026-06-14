@@ -8,12 +8,12 @@ export function FeaturedWorkSection() {
       id="work"
       eyebrow="Featured Work"
       title="Projects with practical problems at the center"
-      description="These are the homepage-level previews. Full case studies and detail pages will come later, after the foundation is in place."
-      className="bg-[#f9f5ed]"
+      description="Homepage-level previews of the kinds of systems Kerone builds: private professional work, community platforms, personal tools, and the portfolio itself."
+      className="section-quiet"
     >
       <div className="grid gap-6 lg:grid-cols-2">
-        {featuredProjects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+        {featuredProjects.map((project, index) => (
+          <ProjectCard key={project.title} project={project} index={index} />
         ))}
       </div>
     </SectionContainer>

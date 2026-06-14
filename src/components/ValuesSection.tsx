@@ -7,12 +7,12 @@ export function ValuesSection() {
     <SectionContainer
       eyebrow="Values That Shape My Work"
       title="Personal values, professional posture"
-      description="These values are part of how Kerone approaches the work: steady, accountable, and focused on usefulness."
-      className="bg-[#f9f5ed]"
+      description="A concise view of the values behind the work: practical, steady, and grounded."
+      className="section-quiet"
     >
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {workValues.map((value) => (
-          <ValueCard key={value.title} value={value} />
+        {workValues.map((value, index) => (
+          <ValueCard key={value.title} value={value} index={index} />
         ))}
       </div>
     </SectionContainer>

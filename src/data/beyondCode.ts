@@ -12,12 +12,12 @@ export const beyondCodeItems: BeyondCodeItem[] = [
   {
     title: "Faith and service",
     description:
-      "A believer in Jesus Christ who values humility, service, and using skills in practical ways.",
+      "A believer in Jesus Christ who values humility, service, and practical care for people.",
   },
   {
     title: "Community involvement",
     description:
-      "Connected to youth track, community work, and the steady effort it takes to help people move forward.",
+      "Connected to youth track, community work, and the steady effort it takes to help young people move forward.",
   },
   {
     title: "Everyday grounding",

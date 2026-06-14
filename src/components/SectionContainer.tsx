@@ -20,17 +20,15 @@ export function SectionContainer({
   narrow = false,
 }: SectionContainerProps) {
   return (
-    <section id={id} className={`py-16 sm:py-20 ${className}`}>
+    <section id={id} className={`py-[4.5rem] sm:py-24 ${className}`}>
       <div className={narrow ? "site-container-narrow" : "site-container"}>
         {(eyebrow || title || description) && (
-          <div className="mb-10 max-w-3xl">
+          <div className="mb-11 max-w-3xl">
             {eyebrow && (
-              <p className="mb-3 text-sm font-semibold uppercase text-[#9b6f20]">
-                {eyebrow}
-              </p>
+              <p className="eyebrow mb-3">{eyebrow}</p>
             )}
             {title && (
-              <h2 className="text-3xl font-semibold text-[#22211f] sm:text-4xl">
+              <h2 className="text-3xl font-semibold leading-tight text-[#22211f] sm:text-4xl">
                 {title}
               </h2>
             )}

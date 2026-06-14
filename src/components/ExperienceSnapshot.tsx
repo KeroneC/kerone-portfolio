@@ -7,15 +7,15 @@ export function ExperienceSnapshot() {
       eyebrow="Experience Snapshot"
       title="A short view of the professional foundation"
       description="The emphasis here is impact, systems thinking, and the technologies that keep showing up in the work."
-      className="bg-[#fbfaf7]"
+      className="section-quiet"
     >
       <div className="grid gap-5 lg:grid-cols-3">
         {experienceItems.map((item) => (
           <article
             key={item.company}
-            className="rounded-lg border border-[#e0d3bf] bg-white p-6 shadow-sm"
+            className="surface-card rounded-lg p-6"
           >
-            <p className="text-sm font-semibold text-[#9b6f20]">
+            <p className="eyebrow">
               {item.company}
             </p>
             <h3 className="mt-2 text-xl font-semibold text-[#22211f]">
