@@ -1,19 +1,33 @@
+import { BeyondCodeSection } from "@/components/BeyondCodeSection";
+import { ContactCTA } from "@/components/ContactCTA";
+import { CurrentFocusSection } from "@/components/CurrentFocusSection";
+import { ExperienceSnapshot } from "@/components/ExperienceSnapshot";
+import { FeaturedWorkSection } from "@/components/FeaturedWorkSection";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { HeroSection } from "@/components/HeroSection";
+import { JourneyTimeline } from "@/components/JourneyTimeline";
+import { StatsSection } from "@/components/StatsSection";
+import { ValuesSection } from "@/components/ValuesSection";
+import { WhatIBuildSection } from "@/components/WhatIBuildSection";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background px-6 py-16 text-foreground sm:px-10">
-      <section className="mx-auto flex min-h-[calc(100vh-8rem)] max-w-3xl flex-col justify-center gap-6">
-        <p className="text-sm font-medium text-neutral-500">Kerone Creary</p>
-        <h1 className="text-4xl font-semibold sm:text-5xl">
-          Building What Matters
-        </h1>
-        <p className="max-w-2xl text-lg text-neutral-600">
-          Software Developer focused on .NET, SQL, and full-stack applications.
-        </p>
-        <p className="max-w-2xl text-sm text-neutral-500">
-          Phase 0 is intentionally small: project initialization, local quality
-          checks, GitHub Actions, and a Vercel-ready workflow.
-        </p>
-      </section>
-    </main>
+    <>
+      <Header />
+      <main>
+        <HeroSection />
+        <StatsSection />
+        <WhatIBuildSection />
+        <FeaturedWorkSection />
+        <JourneyTimeline />
+        <ExperienceSnapshot />
+        <ValuesSection />
+        <BeyondCodeSection />
+        <CurrentFocusSection />
+        <ContactCTA />
+      </main>
+      <Footer />
+    </>
   );
 }
