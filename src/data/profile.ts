@@ -22,11 +22,11 @@ export const profileAssets = {
   profileImage: {
     src: "/images/profile/kerone-profile.png",
     alt: "Portrait of Kerone Creary",
-    isAvailable: false,
+    isAvailable: true,
   },
   resume: {
     href: "/resume/Kerone-Creary-Resume.pdf",
-    isAvailable: false,
+    isAvailable: true,
   },
 };
 
@@ -42,7 +42,7 @@ export const profileLinks = {
   github: {
     label: "GitHub",
     shortLabel: "GH",
-    href: "https://github.com/kerone-creary",
+    href: "https://github.com/KeroneC",
     isPlaceholder: true,
   },
   // TODO: Replace with Kerone's live LinkedIn profile URL.
@@ -56,7 +56,7 @@ export const profileLinks = {
   email: {
     label: "Email",
     shortLabel: "@",
-    href: "mailto:kerone.creary@example.com",
+    href: "mailto:kerone.ant.creary@hotmail.com",
     isPlaceholder: true,
   },
   // TODO: Add the resume PDF to public/resume/Kerone-Creary-Resume.pdf.
