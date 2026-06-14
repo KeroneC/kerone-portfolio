@@ -1,4 +1,5 @@
 import type { FeaturedProject } from "@/data/projects";
+import Link from "next/link";
 
 type ProjectCardProps = {
   project: FeaturedProject;
@@ -78,14 +79,22 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           ))}
         </div>
 
-        <button
-          type="button"
-          disabled
-          title="Case study coming in a future phase"
-          className="mt-6 rounded-md border border-[#d6c9b6] bg-[#fbfaf7] px-4 py-2 text-sm font-bold text-[#7a746a]"
-        >
-          View Case Study
-        </button>
+        {project.hasCaseStudy ? (
+          <Link
+            href={`/work/${project.slug}`}
+            className="button-primary mt-6 w-full"
+            aria-label={`View case study for ${project.title}`}
+          >
+            View Case Study
+          </Link>
+        ) : (
+          <span
+            className="mt-6 rounded-md border border-[#d6c9b6] bg-[#fbfaf7] px-4 py-2 text-center text-sm font-bold text-[#7a746a]"
+            aria-label={`${project.title} case study coming soon`}
+          >
+            Coming Soon
+          </span>
+        )}
       </div>
     </article>
   );
