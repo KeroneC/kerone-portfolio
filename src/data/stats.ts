@@ -6,7 +6,7 @@ export type Stat = {
 export const stats: Stat[] = [
   {
     value: "4+",
-    label: "Years Software Development Experience",
+    label: "Years Building Production Software",
   },
   {
     value: "3",
@@ -14,10 +14,10 @@ export const stats: Stat[] = [
   },
   {
     value: ".NET / SQL",
-    label: "Full-Stack Focus",
+    label: "Backend and Full-Stack Focus",
   },
   {
     value: "Automation",
-    label: "Business Systems Experience",
+    label: "Business Systems and Workflow Experience",
   },
 ];

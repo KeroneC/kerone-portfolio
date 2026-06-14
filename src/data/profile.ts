@@ -11,11 +11,11 @@ export const profile = {
   identity:
     "Software Developer focused on .NET, SQL, and full-stack applications",
   heroCopy:
-    "I'm Kerone Creary, a software developer focused on building practical applications, automation tools, and full-stack systems that help people and teams work better.",
+    "I'm Kerone Creary, a software developer building practical applications, automation tools, and full-stack systems that help people and teams work better.",
   groundingLine:
     "My faith in Jesus Christ keeps me grounded, and my commitment to family, growth, and service shapes how I approach my work.",
   contactCta:
-    "I'm open to software developer opportunities where I can contribute, grow, and help build useful systems with a strong team.",
+    "I'm open to software developer opportunities where I can contribute, keep growing, and help a strong team build useful systems.",
 };
 
 export const navLinks: ProfileLink[] = [

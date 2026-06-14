@@ -17,7 +17,7 @@ export const workValues: WorkValue[] = [
   {
     title: "Discipline",
     description:
-      "Progress comes from showing up, learning consistently, and doing the work even when it is difficult.",
+      "Progress comes from showing up, learning consistently, and doing careful work even when it is difficult.",
   },
   {
     title: "Service",
@@ -27,11 +27,11 @@ export const workValues: WorkValue[] = [
   {
     title: "Growth",
     description:
-      "I stay teachable and keep developing my technical and professional skills.",
+      "I stay teachable and keep developing both technical judgment and professional skill.",
   },
   {
     title: "Accountability",
     description:
-      "I believe in ownership, clear communication, and following through.",
+      "I believe in ownership, clear communication, and following through on the work.",
   },
 ];
