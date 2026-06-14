@@ -1,4 +1,5 @@
 import { profile, profileLinks, socialLinks } from "@/data/profile";
+import { ProfilePortrait } from "./ProfilePortrait";
 
 export function HeroSection() {
   return (
@@ -79,38 +80,7 @@ export function HeroSection() {
         </div>
 
         <div className="mx-auto w-full min-w-0 sm:max-w-md">
-          <div className="surface-card rounded-lg bg-white p-4">
-            <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-md border border-[#d8c7ae] bg-[#f4efe6] text-center">
-              <div
-                className="absolute inset-x-0 top-0 h-20 bg-[#1f5c43]/8"
-                aria-hidden="true"
-              />
-              <div
-                className="absolute bottom-8 left-8 right-8 h-px bg-[#d8c7ae]"
-                aria-hidden="true"
-              />
-              <div
-                className="absolute left-8 top-8 h-16 w-px bg-[#c79a38]"
-                aria-hidden="true"
-              />
-              <div className="px-8">
-                <div className="mx-auto mb-5 flex size-20 items-center justify-center rounded-full border border-[#c79a38] bg-[#fffdf8] text-xl font-bold text-[#1f5c43]">
-                  KC
-                </div>
-                <p className="text-sm font-bold text-[#22211f]">
-                  Portrait frame
-                </p>
-                <p className="mt-2 text-sm leading-6 text-[#625f59]">
-                  Professional image planned
-                </p>
-              </div>
-            </div>
-            <div className="mt-4 flex items-center justify-between text-xs font-bold uppercase text-[#9b6f20]">
-              <span>Practical systems</span>
-              <span className="size-2 rounded-full bg-[#b6473a]" />
-              <span>Built with care</span>
-            </div>
-          </div>
+          <ProfilePortrait />
         </div>
       </div>
     </section>

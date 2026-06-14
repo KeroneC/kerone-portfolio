@@ -18,6 +18,18 @@ export const profile = {
     "I'm open to software developer opportunities where I can contribute, keep growing, and help a strong team build useful systems.",
 };
 
+export const profileAssets = {
+  profileImage: {
+    src: "/images/profile/kerone-profile.png",
+    alt: "Portrait of Kerone Creary",
+    isAvailable: false,
+  },
+  resume: {
+    href: "/resume/Kerone-Creary-Resume.pdf",
+    isAvailable: false,
+  },
+};
+
 export const navLinks: ProfileLink[] = [
   { label: "Home", href: "/" },
   { label: "Work", href: "/work" },
@@ -30,27 +42,27 @@ export const profileLinks = {
   github: {
     label: "GitHub",
     shortLabel: "GH",
-    href: "https://github.com/replace-with-kerone",
+    href: "https://github.com/kerone-creary",
     isPlaceholder: true,
   },
   // TODO: Replace with Kerone's live LinkedIn profile URL.
   linkedin: {
     label: "LinkedIn",
     shortLabel: "in",
-    href: "https://www.linkedin.com/in/replace-with-kerone",
+    href: "https://www.linkedin.com/in/kerone-creary",
     isPlaceholder: true,
   },
   // TODO: Replace with Kerone's preferred contact email address.
   email: {
     label: "Email",
     shortLabel: "@",
-    href: "mailto:replace-with-kerone-email@example.com",
+    href: "mailto:kerone.creary@example.com",
     isPlaceholder: true,
   },
-  // TODO: Add the resume PDF to public/resume.pdf when it is ready.
+  // TODO: Add the resume PDF to public/resume/Kerone-Creary-Resume.pdf.
   resume: {
     label: "Resume",
-    href: "/resume.pdf",
+    href: profileAssets.resume.href,
     isPlaceholder: true,
   },
 } satisfies Record<string, ProfileLink>;
