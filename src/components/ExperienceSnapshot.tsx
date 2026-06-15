@@ -13,7 +13,7 @@ export function ExperienceSnapshot() {
         {experienceItems.map((item) => (
           <article
             key={item.company}
-            className="surface-card rounded-lg p-6"
+            className="surface-card interactive-card rounded-lg p-6"
           >
             <p className="eyebrow">
               {item.company}

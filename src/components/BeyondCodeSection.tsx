@@ -13,7 +13,7 @@ export function BeyondCodeSection() {
           {beyondCodeItems.map((item, index) => (
             <article
               key={item.title}
-              className="surface-card-quiet rounded-lg p-5"
+              className="surface-card-quiet interactive-card rounded-lg p-5"
             >
               <p className="mb-4 text-xs font-bold text-[#9b6f20]">
                 {String(index + 1).padStart(2, "0")}
@@ -32,7 +32,7 @@ export function BeyondCodeSection() {
           {["Family", "Community", "Everyday"].map((label, index) => (
             <div
               key={label}
-              className="relative flex aspect-[4/5] flex-col justify-between overflow-hidden rounded-lg border border-[#d8c7ae] bg-[#f4efe6] p-4"
+              className="interactive-card relative flex aspect-[4/5] flex-col justify-between overflow-hidden rounded-lg border border-[#d8c7ae] bg-[#f4efe6] p-4"
             >
               <span
                 className="absolute inset-x-0 top-0 h-14 bg-[#1f5c43]/8"

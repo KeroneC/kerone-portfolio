@@ -37,7 +37,9 @@ html {
 }
 
 body {
-  background: var(--background);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.86), rgba(251, 250, 247, 1) 44rem),
+    var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
@@ -49,20 +51,20 @@ body {
 .site-container,
 .site-container-narrow {
   margin-inline: auto;
-  width: min(72rem, calc(100vw - 2.5rem));
+  width: min(78rem, calc(100vw - 2.5rem));
 }
 
 .site-container-narrow {
-  width: min(56rem, calc(100vw - 2.5rem));
+  width: min(60rem, calc(100vw - 2.5rem));
 }
 
 @media (min-width: 640px) {
   .site-container {
-    width: min(72rem, calc(100vw - 5rem));
+    width: min(78rem, calc(100vw - 5rem));
   }
 
   .site-container-narrow {
-    width: min(56rem, calc(100vw - 5rem));
+    width: min(60rem, calc(100vw - 5rem));
   }
 }
 
@@ -85,7 +87,16 @@ button {
 }
 
 .section-quiet {
-  background: linear-gradient(180deg, #fbfaf7 0%, #f8f3eb 100%);
+  background: transparent;
+}
+
+.section-panel {
+  border: 1px solid rgba(224, 211, 191, 0.82);
+  border-radius: 0.75rem;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.96), rgba(246, 240, 230, 0.72)),
+    var(--paper);
+  box-shadow: var(--shadow-soft);
 }
 
 .surface-card {
@@ -173,4 +184,112 @@ button {
 ::selection {
   background: #d9c48b;
   color: #22211f;
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-scale-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-enter-title,
+  .hero-enter-copy,
+  .hero-enter-actions,
+  .hero-enter-portrait {
+    animation: hero-fade-up 620ms ease both;
+  }
+
+  .hero-enter-copy {
+    animation-delay: 110ms;
+  }
+
+  .hero-enter-actions {
+    animation-delay: 210ms;
+  }
+
+  .hero-enter-portrait {
+    animation-name: hero-scale-in;
+    animation-delay: 260ms;
+  }
+
+  .reveal[data-reveal-ready="true"] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 520ms ease,
+      transform 520ms ease;
+  }
+
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .button-primary,
+  .button-secondary,
+  .button-gold,
+  .tag,
+  .status-badge,
+  .surface-card,
+  .surface-card-quiet,
+  .interactive-card {
+    transition:
+      background-color 180ms ease,
+      border-color 180ms ease,
+      box-shadow 220ms ease,
+      color 180ms ease,
+      transform 220ms ease;
+  }
+
+  .button-primary:hover,
+  .button-secondary:hover,
+  .button-gold:hover {
+    transform: translateY(-1px);
+  }
+
+  .interactive-card:hover {
+    border-color: rgba(31, 92, 67, 0.34);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-3px);
+  }
+
+  .timeline-item:hover .timeline-dot {
+    transform: scale(1.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+
+  .reveal,
+  .reveal[data-reveal-ready="true"] {
+    opacity: 1;
+    transform: none;
+  }
 }

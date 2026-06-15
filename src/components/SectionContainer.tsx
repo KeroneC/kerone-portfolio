@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Reveal } from "./Reveal";
 
 type SectionContainerProps = {
   id?: string;
@@ -23,7 +24,7 @@ export function SectionContainer({
     <section id={id} className={`py-[4.5rem] sm:py-24 ${className}`}>
       <div className={narrow ? "site-container-narrow" : "site-container"}>
         {(eyebrow || title || description) && (
-          <div className="mb-11 max-w-3xl">
+          <Reveal className="mb-11 max-w-3xl">
             {eyebrow && (
               <p className="eyebrow mb-3">{eyebrow}</p>
             )}
@@ -37,9 +38,9 @@ export function SectionContainer({
                 {description}
               </p>
             )}
-          </div>
+          </Reveal>
         )}
-        {children}
+        <Reveal>{children}</Reveal>
       </div>
     </section>
   );

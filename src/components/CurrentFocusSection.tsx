@@ -13,7 +13,7 @@ export function CurrentFocusSection() {
         {currentFocusItems.map((item) => (
           <div
             key={item}
-            className="surface-card-quiet flex min-h-24 items-start gap-4 rounded-lg p-5"
+            className="surface-card-quiet interactive-card flex min-h-24 items-start gap-4 rounded-lg p-5"
           >
             <span className="mt-1 size-3 rounded-full bg-[#b6473a]" />
             <p className="text-sm font-medium leading-6 text-[#44413c]">

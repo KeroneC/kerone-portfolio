@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { CaseStudy } from "@/data/caseStudies";
+import { Reveal } from "./Reveal";
 
 type CaseStudyLayoutProps = {
   caseStudy: CaseStudy;
@@ -14,10 +15,14 @@ function TextSection({
   children: ReactNode;
 }) {
   return (
-    <section className="surface-card rounded-lg p-6 sm:p-8">
-      <h2 className="text-2xl font-semibold text-[#22211f]">{title}</h2>
-      <div className="mt-4 text-base leading-7 text-[#625f59]">{children}</div>
-    </section>
+    <Reveal>
+      <section className="surface-card interactive-card rounded-lg p-6 sm:p-8">
+        <h2 className="text-2xl font-semibold text-[#22211f]">{title}</h2>
+        <div className="mt-4 text-base leading-7 text-[#625f59]">
+          {children}
+        </div>
+      </section>
+    </Reveal>
   );
 }
 
@@ -38,7 +43,7 @@ function ReviewQueueMockup() {
   ];
 
   return (
-    <article className="overflow-hidden rounded-lg border border-[#e0d3bf] bg-[#fffdf8]">
+    <article className="interactive-card overflow-hidden rounded-lg border border-[#e0d3bf] bg-[#fffdf8]">
       <div className="border-b border-[#e8dfcf] bg-[#efe7d9] p-4">
         <p className="text-xs font-bold uppercase text-[#9b6f20]">
           Recreated mockup
@@ -72,7 +77,7 @@ function ReviewQueueMockup() {
 
 function FlaggedImageMockup() {
   return (
-    <article className="overflow-hidden rounded-lg border border-[#e0d3bf] bg-[#fffdf8]">
+    <article className="interactive-card overflow-hidden rounded-lg border border-[#e0d3bf] bg-[#fffdf8]">
       <div className="border-b border-[#e8dfcf] bg-[#efe7d9] p-4">
         <p className="text-xs font-bold uppercase text-[#9b6f20]">
           Recreated mockup
@@ -113,7 +118,7 @@ function FlaggedImageMockup() {
 
 function WorkflowPipelineMockup({ steps }: { steps: string[] }) {
   return (
-    <article className="rounded-lg border border-[#e0d3bf] bg-[#fffdf8] p-5">
+    <article className="interactive-card rounded-lg border border-[#e0d3bf] bg-[#fffdf8] p-5">
       <p className="text-xs font-bold uppercase text-[#9b6f20]">
         Recreated mockup
       </p>
@@ -153,7 +158,7 @@ function getResultBadgeClass(index: number) {
 
 function ResultBadgesMockup() {
   return (
-    <article className="rounded-lg border border-[#e0d3bf] bg-[#fffdf8] p-5">
+    <article className="interactive-card rounded-lg border border-[#e0d3bf] bg-[#fffdf8] p-5">
       <p className="text-xs font-bold uppercase text-[#9b6f20]">
         Recreated mockup
       </p>
@@ -180,46 +185,48 @@ function ResultBadgesMockup() {
 export function CaseStudyLayout({ caseStudy }: CaseStudyLayoutProps) {
   return (
     <main>
-      <section className="section-wash">
-        <div className="site-container py-10 sm:py-16">
-          <Link
-            href="/work"
-            className="text-sm font-bold text-[#1f5c43] hover:text-[#143f2e]"
-          >
-            Back to Work
-          </Link>
+      <section className="py-10 sm:py-14">
+        <div className="site-container">
+          <Reveal className="section-panel p-7 sm:p-10">
+            <Link
+              href="/work"
+              className="text-sm font-bold text-[#1f5c43] hover:text-[#143f2e]"
+            >
+              Back to Work
+            </Link>
 
-          <div className="mt-8 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-            <div>
-              <div className="mb-4 flex flex-wrap gap-2">
-                <span className="rounded-md bg-[#e8f0ea] px-3 py-1 text-xs font-bold text-[#1f5c43]">
-                  {caseStudy.type}
-                </span>
-                <span className="status-badge">{caseStudy.status}</span>
-              </div>
-              <h1 className="max-w-4xl text-4xl font-bold leading-tight text-[#22211f] sm:text-6xl">
-                {caseStudy.title}
-              </h1>
-              <p className="mt-5 max-w-3xl text-xl leading-8 text-[#44413c]">
-                {caseStudy.subtitle}
-              </p>
-            </div>
-
-            <div className="surface-card rounded-lg p-5">
-              <p className="eyebrow mb-4">Tech Stack</p>
-              <div className="flex flex-wrap gap-2">
-                {caseStudy.techStack.map((tech) => (
-                  <span key={tech} className="tag">
-                    {tech}
+            <div className="mt-8 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+              <div>
+                <div className="mb-4 flex flex-wrap gap-2">
+                  <span className="rounded-md bg-[#e8f0ea] px-3 py-1 text-xs font-bold text-[#1f5c43]">
+                    {caseStudy.type}
                   </span>
-                ))}
+                  <span className="status-badge">{caseStudy.status}</span>
+                </div>
+                <h1 className="max-w-4xl text-4xl font-bold leading-tight text-[#22211f] sm:text-6xl">
+                  {caseStudy.title}
+                </h1>
+                <p className="mt-5 max-w-3xl text-xl leading-8 text-[#44413c]">
+                  {caseStudy.subtitle}
+                </p>
+              </div>
+
+              <div className="surface-card rounded-lg p-5">
+                <p className="eyebrow mb-4">Tech Stack</p>
+                <div className="flex flex-wrap gap-2">
+                  {caseStudy.techStack.map((tech) => (
+                    <span key={tech} className="tag">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      <div className="site-container grid gap-6 py-14 sm:py-20">
+      <div className="site-container grid gap-8 py-14 sm:py-20">
         <TextSection title="Summary">
           <p>{caseStudy.summary}</p>
         </TextSection>
@@ -242,32 +249,35 @@ export function CaseStudyLayout({ caseStudy }: CaseStudyLayoutProps) {
           </TextSection>
         </div>
 
-        <section className="surface-card rounded-lg p-6 sm:p-8">
-          <div className="mb-6">
-            <p className="eyebrow mb-3">Architecture / Workflow</p>
-            <h2 className="text-2xl font-semibold text-[#22211f]">
-              From image batch to prioritized review
-            </h2>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {caseStudy.architectureSteps.map((step, index) => (
-              <div
-                key={step}
-                className="relative rounded-lg border border-[#e0d3bf] bg-[#fffdf8] p-4"
-              >
-                <p className="text-xs font-bold text-[#9b6f20]">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <p className="mt-3 text-sm font-semibold leading-6 text-[#22211f]">
-                  {step}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <Reveal>
+          <section className="surface-card rounded-lg p-6 sm:p-8">
+            <div className="mb-6">
+              <p className="eyebrow mb-3">Architecture / Workflow</p>
+              <h2 className="text-2xl font-semibold text-[#22211f]">
+                From image batch to prioritized review
+              </h2>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {caseStudy.architectureSteps.map((step, index) => (
+                <div
+                  key={step}
+                  className="interactive-card relative rounded-lg border border-[#e0d3bf] bg-[#fffdf8] p-4"
+                >
+                  <p className="text-xs font-bold text-[#9b6f20]">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <p className="mt-3 text-sm font-semibold leading-6 text-[#22211f]">
+                    {step}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        </Reveal>
 
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-          <section className="surface-card rounded-lg p-6 sm:p-8">
+          <Reveal>
+            <section className="surface-card interactive-card rounded-lg p-6 sm:p-8">
             <h2 className="text-2xl font-semibold text-[#22211f]">
               Key Features
             </h2>
@@ -281,9 +291,11 @@ export function CaseStudyLayout({ caseStudy }: CaseStudyLayoutProps) {
                 </li>
               ))}
             </ul>
-          </section>
+            </section>
+          </Reveal>
 
-          <section className="surface-card rounded-lg p-6 sm:p-8">
+          <Reveal>
+            <section className="surface-card interactive-card rounded-lg p-6 sm:p-8">
             <h2 className="text-2xl font-semibold text-[#22211f]">
               Technical Decisions
             </h2>
@@ -291,7 +303,7 @@ export function CaseStudyLayout({ caseStudy }: CaseStudyLayoutProps) {
               {caseStudy.technicalDecisions.map((decision) => (
                 <article
                   key={decision.title}
-                  className="rounded-md border border-[#e0d3bf] bg-[#fffdf8] p-4"
+                  className="interactive-card rounded-md border border-[#e0d3bf] bg-[#fffdf8] p-4"
                 >
                   <h3 className="text-base font-semibold text-[#22211f]">
                     {decision.title}
@@ -302,7 +314,8 @@ export function CaseStudyLayout({ caseStudy }: CaseStudyLayoutProps) {
                 </article>
               ))}
             </div>
-          </section>
+            </section>
+          </Reveal>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2">
@@ -314,40 +327,44 @@ export function CaseStudyLayout({ caseStudy }: CaseStudyLayoutProps) {
           </TextSection>
         </div>
 
-        <section className="surface-card rounded-lg p-6 sm:p-8">
-          <div className="mb-6">
-            <p className="eyebrow mb-3">Recreated Mockups</p>
-            <h2 className="text-2xl font-semibold text-[#22211f]">
-              Portfolio visuals without proprietary data
-            </h2>
-            <p className="mt-3 max-w-3xl text-sm leading-6 text-[#625f59]">
-              These visuals are recreated placeholders intended to communicate
-              the workflow without exposing private systems or source images.
-            </p>
-          </div>
-          <div className="grid gap-5 lg:grid-cols-2">
-            <ReviewQueueMockup />
-            <FlaggedImageMockup />
-            <WorkflowPipelineMockup steps={caseStudy.architectureSteps} />
-            <ResultBadgesMockup />
-          </div>
-        </section>
-
-        {caseStudy.links && caseStudy.links.length > 0 && (
+        <Reveal>
           <section className="surface-card rounded-lg p-6 sm:p-8">
-            <h2 className="text-2xl font-semibold text-[#22211f]">Links</h2>
-            <div className="mt-5 flex flex-wrap gap-3">
-              {caseStudy.links.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="button-secondary"
-                >
-                  {link.label}
-                </Link>
-              ))}
+            <div className="mb-6">
+              <p className="eyebrow mb-3">Recreated Mockups</p>
+              <h2 className="text-2xl font-semibold text-[#22211f]">
+                Portfolio visuals without proprietary data
+              </h2>
+              <p className="mt-3 max-w-3xl text-sm leading-6 text-[#625f59]">
+                These visuals are recreated placeholders intended to communicate
+                the workflow without exposing private systems or source images.
+              </p>
+            </div>
+            <div className="grid gap-5 lg:grid-cols-2">
+              <ReviewQueueMockup />
+              <FlaggedImageMockup />
+              <WorkflowPipelineMockup steps={caseStudy.architectureSteps} />
+              <ResultBadgesMockup />
             </div>
           </section>
+        </Reveal>
+
+        {caseStudy.links && caseStudy.links.length > 0 && (
+          <Reveal>
+            <section className="surface-card rounded-lg p-6 sm:p-8">
+              <h2 className="text-2xl font-semibold text-[#22211f]">Links</h2>
+              <div className="mt-5 flex flex-wrap gap-3">
+                {caseStudy.links.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="button-secondary"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          </Reveal>
         )}
       </div>
     </main>

@@ -10,7 +10,7 @@ const contactLinks = [
 
 export function ContactCTA() {
   return (
-    <SectionContainer id="contact" className="bg-[#173f2f]" narrow>
+    <SectionContainer id="contact" narrow>
       <div className="relative overflow-hidden rounded-lg border border-[#3b7359] bg-[#1f5c43] p-8 text-center shadow-[0_24px_55px_rgba(20,63,46,0.22)] sm:p-12">
         <div
           className="absolute inset-x-0 top-0 h-1 bg-[#c79a38]"

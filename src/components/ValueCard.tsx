@@ -7,7 +7,7 @@ type ValueCardProps = {
 
 export function ValueCard({ value, index }: ValueCardProps) {
   return (
-    <article className="surface-card relative overflow-hidden rounded-lg p-6">
+    <article className="surface-card interactive-card relative overflow-hidden rounded-lg p-6">
       <div
         className="absolute inset-x-0 top-0 h-1 bg-[#b6473a]"
         aria-hidden="true"

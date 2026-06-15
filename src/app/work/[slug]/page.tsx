@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { Reveal } from "@/components/Reveal";
 import { getCaseStudyBySlug } from "@/data/caseStudies";
 import { featuredProjects } from "@/data/projects";
 
@@ -66,29 +67,31 @@ export default async function CaseStudyPage({ params }: CaseStudyRouteProps) {
     <>
       <Header />
       <main>
-        <section className="section-wash">
-          <div className="site-container py-14 sm:py-20">
-            <Link
-              href="/work"
-              className="text-sm font-bold text-[#1f5c43] hover:text-[#143f2e]"
-            >
-              Back to Work
-            </Link>
-            <div className="mt-8 max-w-3xl">
-              <div className="mb-4 flex flex-wrap gap-2">
-                <span className="rounded-md bg-[#e8f0ea] px-3 py-1 text-xs font-bold text-[#1f5c43]">
-                  {project.type}
-                </span>
-                <span className="status-badge">{project.status}</span>
+        <section className="py-10 sm:py-14">
+          <div className="site-container">
+            <Reveal className="section-panel p-7 sm:p-10">
+              <Link
+                href="/work"
+                className="text-sm font-bold text-[#1f5c43] hover:text-[#143f2e]"
+              >
+                Back to Work
+              </Link>
+              <div className="mt-8 max-w-3xl">
+                <div className="mb-4 flex flex-wrap gap-2">
+                  <span className="rounded-md bg-[#e8f0ea] px-3 py-1 text-xs font-bold text-[#1f5c43]">
+                    {project.type}
+                  </span>
+                  <span className="status-badge">{project.status}</span>
+                </div>
+                <h1 className="text-4xl font-bold leading-tight text-[#22211f] sm:text-6xl">
+                  {project.title}
+                </h1>
+                <p className="mt-5 text-lg leading-8 text-[#625f59]">
+                  This case study is structured for a future phase. For now, the
+                  Work page includes a homepage-level project preview.
+                </p>
               </div>
-              <h1 className="text-4xl font-bold leading-tight text-[#22211f] sm:text-6xl">
-                {project.title}
-              </h1>
-              <p className="mt-5 text-lg leading-8 text-[#625f59]">
-                This case study is structured for a future phase. For now, the
-                Work page includes a homepage-level project preview.
-              </p>
-            </div>
+            </Reveal>
           </div>
         </section>
       </main>

@@ -12,7 +12,7 @@ export function WhatIBuildSection() {
         {buildCategories.map((category, index) => (
           <article
             key={category.title}
-            className="surface-card group relative overflow-hidden rounded-lg p-6"
+            className="surface-card interactive-card group relative overflow-hidden rounded-lg p-6"
           >
             <div
               className="absolute inset-x-0 top-0 h-1 bg-[#1f5c43]"
