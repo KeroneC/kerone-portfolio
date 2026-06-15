@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: CaseStudyRouteProps) {
 
   if (caseStudy) {
     return {
-      title: `${caseStudy.title} | Kerone Creary`,
+      title: caseStudy.title,
       description: caseStudy.subtitle,
     };
   }

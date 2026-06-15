@@ -31,11 +31,7 @@ export function ContactCTA() {
             <a
               key={link.label}
               href={link.href}
-              title={
-                link.isPlaceholder
-                  ? `Placeholder ${link.label} link - replace in src/data/profile.ts`
-                  : link.label
-              }
+              title={link.label}
               className={
                 index === 0
                   ? "button-secondary border-white bg-white text-[#1f5c43] hover:bg-[#fff7df]"

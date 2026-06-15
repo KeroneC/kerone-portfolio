@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { BeyondCodeSection } from "@/components/BeyondCodeSection";
 import { ContactCTA } from "@/components/ContactCTA";
 import { CurrentFocusSection } from "@/components/CurrentFocusSection";
@@ -10,6 +11,12 @@ import { JourneyTimeline } from "@/components/JourneyTimeline";
 import { StatsSection } from "@/components/StatsSection";
 import { ValuesSection } from "@/components/ValuesSection";
 import { WhatIBuildSection } from "@/components/WhatIBuildSection";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Kerone Creary is a software developer focused on .NET, SQL, automation tools, and full-stack applications that help people and teams work better.",
+};
 
 export default function Home() {
   return (

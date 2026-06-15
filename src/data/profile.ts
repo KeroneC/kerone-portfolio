@@ -33,37 +33,33 @@ export const profileAssets = {
 export const navLinks: ProfileLink[] = [
   { label: "Home", href: "/" },
   { label: "Work", href: "/work" },
-  { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const profileLinks = {
-  // TODO: Replace with Kerone's live GitHub profile URL.
   github: {
     label: "GitHub",
     shortLabel: "GH",
     href: "https://github.com/KeroneC",
-    isPlaceholder: true,
+    isPlaceholder: false,
   },
-  // TODO: Replace with Kerone's live LinkedIn profile URL.
   linkedin: {
     label: "LinkedIn",
     shortLabel: "in",
-    href: "https://www.linkedin.com/in/kerone-creary",
-    isPlaceholder: true,
+    href: "https://www.linkedin.com/in/kcreary/",
+    isPlaceholder: false,
   },
-  // TODO: Replace with Kerone's preferred contact email address.
   email: {
     label: "Email",
     shortLabel: "@",
     href: "mailto:kerone.ant.creary@hotmail.com",
-    isPlaceholder: true,
+    isPlaceholder: false,
   },
-  // TODO: Add the resume PDF to public/resume/Kerone-Creary-Resume.pdf.
   resume: {
     label: "Resume",
     href: profileAssets.resume.href,
-    isPlaceholder: true,
+    isPlaceholder: false,
   },
 } satisfies Record<string, ProfileLink>;
 
