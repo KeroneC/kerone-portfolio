@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { profile, profileLinks, socialLinks } from "@/data/profile";
 import { ProfilePortrait } from "./ProfilePortrait";
 
@@ -39,21 +40,20 @@ export function HeroSection() {
           </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#work"
+            <Link
+              href="/work"
               className="button-primary w-full sm:w-auto"
             >
               View My Work
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              href="/contact"
               className="button-secondary w-full sm:w-auto"
             >
               Contact Me
-            </a>
+            </Link>
             <a
               href={profileLinks.resume.href}
-              title="Placeholder resume link - replace with public/resume.pdf"
               className="button-gold w-full sm:w-auto"
             >
               Resume
@@ -66,11 +66,7 @@ export function HeroSection() {
                 key={link.label}
                 href={link.href}
                 aria-label={link.label}
-                title={
-                  link.isPlaceholder
-                    ? `Placeholder ${link.label} link - replace in src/data/profile.ts`
-                    : link.label
-                }
+                title={link.label}
                 className="flex size-11 items-center justify-center rounded-full border border-[#d6c9b6] bg-white text-sm font-bold text-[#1f5c43] shadow-sm hover:border-[#1f5c43]"
               >
                 {link.shortLabel}

@@ -4,7 +4,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { featuredProjects } from "@/data/projects";
 
 export const metadata = {
-  title: "Featured Work | Kerone Creary",
+  title: "Featured Work",
   description:
     "Professional case studies, personal projects, and community-focused software work by Kerone Creary.",
 };
