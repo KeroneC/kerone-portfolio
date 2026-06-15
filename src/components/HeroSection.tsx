@@ -5,9 +5,9 @@ import { ProfilePortrait } from "./ProfilePortrait";
 export function HeroSection() {
   return (
     <section id="home" className="section-wash relative overflow-hidden">
-      <div className="site-container grid min-h-[720px] items-center gap-12 py-14 sm:py-20 lg:grid-cols-[1.12fr_0.88fr]">
+      <div className="site-container grid min-h-[720px] items-center gap-12 py-14 sm:py-20 lg:grid-cols-[1.12fr_0.88fr] xl:min-h-[760px]">
         <div className="w-full min-w-0 sm:max-w-3xl">
-          <div className="mb-6 flex flex-wrap gap-2">
+          <div className="hero-enter-copy mb-6 flex flex-wrap gap-2">
             {["Practical software", "Automation", "Full-stack systems"].map(
               (item) => (
                 <span key={item} className="tag bg-white/70">
@@ -20,7 +20,7 @@ export function HeroSection() {
           <p className="eyebrow mb-4">
             {profile.identity}
           </p>
-          <h1 className="max-w-[12ch] text-5xl font-bold leading-[1.02] text-[#22211f] sm:max-w-none sm:text-7xl">
+          <h1 className="hero-enter-title max-w-[12ch] text-5xl font-bold leading-[1.02] text-[#22211f] sm:max-w-none sm:text-7xl">
             Building{" "}
             <span className="relative inline-block">
               What Matters
@@ -30,16 +30,18 @@ export function HeroSection() {
               />
             </span>
           </h1>
-          <p className="mt-7 max-w-2xl text-xl leading-8 text-[#3e3a34]">
-            {profile.heroCopy}
-          </p>
-          <div className="mt-6 max-w-2xl rounded-lg border border-[#e4d7c3] bg-white/70 p-4 shadow-sm">
-            <p className="border-l-4 border-[#c79a38] pl-4 text-base leading-7 text-[#625f59]">
-              {profile.groundingLine}
+          <div className="hero-enter-copy">
+            <p className="mt-7 max-w-2xl text-xl leading-8 text-[#3e3a34]">
+              {profile.heroCopy}
             </p>
+            <div className="mt-6 max-w-2xl rounded-lg border border-[#e4d7c3] bg-white/70 p-4 shadow-sm">
+              <p className="border-l-4 border-[#c79a38] pl-4 text-base leading-7 text-[#625f59]">
+                {profile.groundingLine}
+              </p>
+            </div>
           </div>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="hero-enter-actions mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/work"
               className="button-primary w-full sm:w-auto"
@@ -60,7 +62,7 @@ export function HeroSection() {
             </a>
           </div>
 
-          <div className="mt-8 flex items-center gap-3" aria-label="Social links">
+          <div className="hero-enter-actions mt-8 flex items-center gap-3" aria-label="Social links">
             {socialLinks.map((link) => (
               <a
                 key={link.label}
@@ -75,7 +77,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="mx-auto w-full min-w-0 sm:max-w-md">
+        <div className="hero-enter-portrait mx-auto w-full min-w-0 sm:max-w-md">
           <ProfilePortrait />
         </div>
       </div>

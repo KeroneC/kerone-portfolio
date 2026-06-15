@@ -15,9 +15,9 @@ export function JourneyTimeline() {
           {timelineItems.map((item, index) => (
             <article
               key={item.title}
-              className="relative pb-8 pl-7 last:pb-0"
+              className="timeline-item relative pb-8 pl-7 last:pb-0"
             >
-              <span className="absolute -left-[6px] top-1 flex size-3 items-center justify-center rounded-full bg-[#fffdf8] ring-1 ring-[#1f5c43]">
+              <span className="timeline-dot absolute -left-[6px] top-1 flex size-3 items-center justify-center rounded-full bg-[#fffdf8] ring-1 ring-[#1f5c43]">
                 <span
                   className="size-1.5 rounded-full bg-[#1f5c43]"
                   aria-hidden="true"

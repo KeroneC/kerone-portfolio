@@ -106,7 +106,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   const accent = mockupAccents[index % mockupAccents.length];
 
   return (
-    <article className="surface-card flex h-full flex-col overflow-hidden rounded-lg">
+    <article className="surface-card interactive-card flex h-full flex-col overflow-hidden rounded-lg">
       <div className="border-b border-[#e8dfcf] bg-[#efe7d9] p-5">
         <div className="rounded-md border border-[#dccbb3] bg-[#fffdf8] p-3 shadow-sm">
           <div className="mb-3 flex items-center justify-between">
