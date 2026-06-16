@@ -1,6 +1,6 @@
 # Kerone Creary Portfolio
 
-Phase 0 foundation for Kerone Creary's personal developer portfolio.
+Personal developer portfolio for Kerone Creary.
 
 Core theme: **Building What Matters**
 
@@ -18,6 +18,14 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Content
+
+- Profile/contact links: `src/data/profile.ts`
+- Portfolio project summaries: `src/data/projects.ts`
+- Case study content: `src/data/caseStudies.ts`
+- Profile image: `public/images/profile/kerone-profile.png`
+- Resume PDF: `public/resume/Kerone-Creary-Resume.pdf`
 
 ## Local Checks
 

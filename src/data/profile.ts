@@ -15,13 +15,13 @@ export const profile = {
   groundingLine:
     "My faith in Jesus Christ keeps me grounded, and my commitment to family, growth, and service shapes how I approach my work.",
   contactCta:
-    "I'm open to software developer opportunities where I can contribute, keep growing, and help a strong team build useful systems.",
+    "I'm open to software developer opportunities where I can contribute to practical systems, keep growing, and support a strong team.",
 };
 
 export const profileAssets = {
   profileImage: {
     src: "/images/profile/kerone-profile.png",
-    alt: "Portrait of Kerone Creary",
+    alt: "Kerone Creary, software developer",
     isAvailable: true,
   },
   resume: {
@@ -57,7 +57,7 @@ export const profileLinks = {
     isPlaceholder: false,
   },
   resume: {
-    label: "Resume",
+    label: "View Resume",
     href: profileAssets.resume.href,
     isPlaceholder: false,
   },

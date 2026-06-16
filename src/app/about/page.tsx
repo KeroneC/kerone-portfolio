@@ -9,7 +9,17 @@ import { profile } from "@/data/profile";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn more about Kerone Creary, a software developer focused on .NET, SQL, and full-stack applications.",
+    "Learn more about Kerone Creary, a software developer focused on practical .NET, SQL, and full-stack application work.",
+  openGraph: {
+    title: "About Kerone Creary",
+    description:
+      "A grounded professional story shaped by software work, growth, faith, family, and community.",
+  },
+  twitter: {
+    title: "About Kerone Creary",
+    description:
+      "A grounded professional story shaped by software work, growth, faith, family, and community.",
+  },
 };
 
 const approachItems = [
@@ -42,7 +52,7 @@ export default function AboutPage() {
                 </p>
                 <p className="mt-6 max-w-3xl text-base leading-7 text-[#625f59]">
                   I&apos;m a software developer focused on building practical
-                  systems that help people and teams work better. My path has
+                  systems that make work clearer and more manageable. My path has
                   shaped how I approach work: stay grounded, keep learning, and
                   build with purpose.
                 </p>

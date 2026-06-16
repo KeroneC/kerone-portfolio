@@ -32,7 +32,7 @@ export function Header() {
           href={profileLinks.resume.href}
           className="button-secondary w-full border-[#1f5c43] text-[#1f5c43] md:w-auto md:justify-self-end"
         >
-          Resume
+          View Resume
         </a>
       </div>
     </header>

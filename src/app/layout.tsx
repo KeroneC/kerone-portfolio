@@ -14,6 +14,7 @@ export const metadata: Metadata = {
       "Software developer focused on .NET, SQL, automation tools, and full-stack applications that help people and teams work better.",
     type: "website",
     siteName: "Kerone Creary Portfolio",
+    locale: "en_US",
   },
   twitter: {
     card: "summary",

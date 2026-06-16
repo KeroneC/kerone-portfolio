@@ -13,9 +13,21 @@ import { ValuesSection } from "@/components/ValuesSection";
 import { WhatIBuildSection } from "@/components/WhatIBuildSection";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: {
+    absolute: "Kerone Creary | Software Developer",
+  },
   description:
     "Kerone Creary is a software developer focused on .NET, SQL, automation tools, and full-stack applications that help people and teams work better.",
+  openGraph: {
+    title: "Kerone Creary | Software Developer",
+    description:
+      "Software developer focused on .NET, SQL, automation tools, and full-stack applications that help people and teams work better.",
+  },
+  twitter: {
+    title: "Kerone Creary | Software Developer",
+    description:
+      "Software developer focused on .NET, SQL, automation tools, and full-stack applications that help people and teams work better.",
+  },
 };
 
 export default function Home() {
