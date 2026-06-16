@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { Footer } from "@/components/Footer";
@@ -19,7 +20,9 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: CaseStudyRouteProps) {
+export async function generateMetadata({
+  params,
+}: CaseStudyRouteProps): Promise<Metadata> {
   const { slug } = await params;
   const caseStudy = getCaseStudyBySlug(slug);
   const project = featuredProjects.find((item) => item.slug === slug);
@@ -28,6 +31,14 @@ export async function generateMetadata({ params }: CaseStudyRouteProps) {
     return {
       title: caseStudy.title,
       description: caseStudy.subtitle,
+      openGraph: {
+        title: `${caseStudy.title} | Kerone Creary`,
+        description: caseStudy.subtitle,
+      },
+      twitter: {
+        title: `${caseStudy.title} | Kerone Creary`,
+        description: caseStudy.subtitle,
+      },
     };
   }
 
@@ -35,6 +46,14 @@ export async function generateMetadata({ params }: CaseStudyRouteProps) {
     return {
       title: `${project.title} | Coming Soon`,
       description: project.problem,
+      openGraph: {
+        title: `${project.title} | Coming Soon`,
+        description: project.problem,
+      },
+      twitter: {
+        title: `${project.title} | Coming Soon`,
+        description: project.problem,
+      },
     };
   }
 
@@ -88,7 +107,8 @@ export default async function CaseStudyPage({ params }: CaseStudyRouteProps) {
                 </h1>
                 <p className="mt-5 text-lg leading-8 text-[#625f59]">
                   This case study is structured for a future phase. For now, the
-                  Work page includes a homepage-level project preview.
+                  Work page includes a clear project preview and coming-soon
+                  status.
                 </p>
               </div>
             </Reveal>

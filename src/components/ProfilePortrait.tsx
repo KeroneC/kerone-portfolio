@@ -25,7 +25,7 @@ export function ProfilePortrait() {
             fill
             priority
             sizes="(min-width: 1024px) 28rem, 90vw"
-            className="object-cover object-[50%_35%]"
+            className="object-cover object-[50%_32%]"
           />
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center px-8">

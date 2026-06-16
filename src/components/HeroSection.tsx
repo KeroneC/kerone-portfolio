@@ -58,7 +58,7 @@ export function HeroSection() {
               href={profileLinks.resume.href}
               className="button-gold w-full sm:w-auto"
             >
-              Resume
+              View Resume
             </a>
           </div>
 

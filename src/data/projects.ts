@@ -13,7 +13,7 @@ export const featuredProjects: FeaturedProject[] = [
     slug: "image-quality-audit-tool",
     title: "Image Quality Audit Tool",
     type: "Professional Case Study",
-    status: "Private / Recreated Mockups Planned",
+    status: "Private Work / Recreated Mockups",
     problem:
       "Used OCR, feature matching, image processing, and machine learning techniques to flag collectible image crops that needed flipping, rotation, or manual review.",
     tags: [
@@ -42,7 +42,7 @@ export const featuredProjects: FeaturedProject[] = [
     type: "Personal Productivity Tool",
     status: "Planned / In Progress",
     problem:
-      "A focused tool for organizing job applications, recruiter conversations, interview notes, statuses, and follow-ups.",
+      "A focused tool for organizing applications, recruiter conversations, interview notes, statuses, and follow-ups.",
     tags: ["Next.js", "TypeScript", "SQL", "Full-Stack"],
     hasCaseStudy: false,
   },

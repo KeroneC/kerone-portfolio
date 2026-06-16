@@ -1,13 +1,24 @@
+import type { Metadata } from "next";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
 import { featuredProjects } from "@/data/projects";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Featured Work",
   description:
-    "Professional case studies, personal projects, and community-focused software work by Kerone Creary.",
+    "Case studies, personal projects, and community-focused software work by Kerone Creary.",
+  openGraph: {
+    title: "Featured Work | Kerone Creary",
+    description:
+      "Case studies, personal projects, and community-focused software work by Kerone Creary.",
+  },
+  twitter: {
+    title: "Featured Work | Kerone Creary",
+    description:
+      "Case studies, personal projects, and community-focused software work by Kerone Creary.",
+  },
 };
 
 export default function WorkPage() {
@@ -23,9 +34,9 @@ export default function WorkPage() {
                 Featured Work
               </h1>
               <p className="mt-5 max-w-3xl text-lg leading-8 text-[#625f59]">
-                A collection of professional case studies, personal projects, and
-                community-focused software work. Some projects are fully written
-                up now, while others are structured for future case studies.
+                A collection of case studies, personal projects, and
+                community-focused software work. Some projects are written up
+                now, while others are marked for future case studies.
               </p>
             </Reveal>
           </div>

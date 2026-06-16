@@ -46,7 +46,7 @@ export const caseStudies: CaseStudy[] = [
     type: "Professional Case Study",
     status: "Private Work / Recreated Mockups",
     summary:
-      "This project supported quality control for cropped collectible images by flagging images that may have orientation issues, failed crops, or other visual problems before final review.",
+      "This project supported quality control for cropped collectible images by flagging records that may have orientation issues, failed crops, or other visual problems before final review.",
     techStack: [
       ".NET",
       "OCR",
@@ -61,9 +61,9 @@ export const caseStudies: CaseStudy[] = [
     goal:
       "Create a workflow that could help prioritize manual review by surfacing images most likely to need attention.",
     role:
-      "Contributed to the design and development of an audit approach that combined image-processing techniques, OCR, feature matching, and machine-learning-assisted flagging to identify image crops that may require review.",
+      "Contributed to the design and development of an audit approach that combined image-processing techniques, OCR, feature matching, and machine-learning-assisted flagging to identify crops that may require review.",
     solution:
-      "The audit workflow analyzed cropped images using multiple checks instead of relying on a single method. OCR helped detect readable text and possible orientation issues. Feature matching helped compare expected visual structure. Image-processing and machine-learning-assisted checks helped flag suspicious crops that may require manual review.",
+      "The audit workflow analyzed cropped images with multiple checks instead of relying on a single method. OCR helped detect readable text and possible orientation issues. Feature matching helped compare expected visual structure. Image-processing and machine-learning-assisted checks helped flag suspicious crops for manual review.",
     architectureSteps: [
       "Image batch received",
       "Cropped images scanned",

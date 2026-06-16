@@ -8,6 +8,16 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Contact Kerone Creary for software developer opportunities focused on .NET, backend, full-stack, and workflow automation work.",
+  openGraph: {
+    title: "Contact Kerone Creary",
+    description:
+      "Reach out about .NET, backend, full-stack, and software developer roles focused on practical systems.",
+  },
+  twitter: {
+    title: "Contact Kerone Creary",
+    description:
+      "Reach out about .NET, backend, full-stack, and software developer roles focused on practical systems.",
+  },
 };
 
 const contactCards = [
@@ -59,7 +69,11 @@ export default function ContactPage() {
                   key={link.label}
                   href={link.href}
                   className="surface-card interactive-card group rounded-lg p-5"
-                  aria-label={`Open ${link.label}`}
+                  aria-label={
+                    link.label === "View Resume"
+                      ? "Open Kerone Creary resume"
+                      : `Open ${link.label}`
+                  }
                 >
                   <p className="text-xs font-bold uppercase text-[#9b6f20]">
                     {link.label}
@@ -67,19 +81,19 @@ export default function ContactPage() {
                   <p className="mt-3 text-lg font-semibold text-[#22211f]">
                     {link.label === "Email"
                       ? "Send an email"
-                      : link.label === "Resume"
+                      : link.label === "View Resume"
                         ? "View resume"
                         : `Visit ${link.label}`}
                   </p>
                   <p className="mt-3 text-sm leading-6 text-[#625f59]">
                     {link.label === "Email"
                       ? "Best for direct conversations about roles, projects, or next steps."
-                      : link.label === "Resume"
+                      : link.label === "View Resume"
                         ? "PDF resume ready for recruiter and hiring manager review."
                         : `Connect with Kerone on ${link.label}.`}
                   </p>
                   <span className="mt-5 inline-flex text-sm font-bold text-[#1f5c43] group-hover:text-[#143f2e]">
-                    Open {link.label}
+                    {link.label === "View Resume" ? "Open Resume" : `Open ${link.label}`}
                   </span>
                 </a>
               ))}

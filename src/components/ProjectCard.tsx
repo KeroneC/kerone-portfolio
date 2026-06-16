@@ -163,9 +163,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         ) : (
           <span
             className="mt-6 rounded-md border border-[#d6c9b6] bg-[#fbfaf7] px-4 py-2 text-center text-sm font-bold text-[#7a746a]"
-            aria-label={`${project.title} case study coming soon`}
+            aria-label={`${project.title} case study is coming soon`}
           >
-            Coming Soon
+            Case Study Coming Soon
           </span>
         )}
       </div>
