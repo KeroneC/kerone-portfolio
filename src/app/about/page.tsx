@@ -30,7 +30,7 @@ const approachItems = [
 
 const groundingItems = [
   "Based in Western Pennsylvania, with a Jamaican background that remains part of the story.",
-  "A husband, believer in Jesus Christ, and family-centered person.",
+  "My faith in Jesus Christ, my role as a husband, and my commitment to family shape how I live and work.",
   "Connected to youth track and community involvement through steady service.",
 ];
 
