@@ -10,9 +10,9 @@ export const beyondCodeItems: BeyondCodeItem[] = [
       "Husband, family member, and someone who wants growth to matter at home as much as it does at work.",
   },
   {
-    title: "Faith and service",
+    title: "Service-minded life",
     description:
-      "A believer in Jesus Christ who values humility, service, and practical care for people.",
+      "A commitment to humility, service, and practical care for the people around me.",
   },
   {
     title: "Community involvement",
@@ -22,6 +22,6 @@ export const beyondCodeItems: BeyondCodeItem[] = [
   {
     title: "Everyday grounding",
     description:
-      "A family-centered rhythm, quiet growth, and Beans the cat keep life warm and grounded.",
+      "A family-centered rhythm, quiet growth, and everyday responsibilities keep life grounded.",
   },
 ];

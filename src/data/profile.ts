@@ -13,7 +13,7 @@ export const profile = {
   heroCopy:
     "I'm Kerone Creary, a software developer building practical applications, automation tools, and full-stack systems that help people and teams work better.",
   groundingLine:
-    "My faith in Jesus Christ keeps me grounded, and my commitment to family, growth, and service shapes how I approach my work.",
+    "I approach software with purpose, discipline, and a focus on building systems that are useful, maintainable, and grounded in real needs.",
   contactCta:
     "I'm open to software developer opportunities where I can contribute to practical systems, keep growing, and support a strong team.",
 };

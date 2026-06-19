@@ -7,7 +7,7 @@ export const workValues: WorkValue[] = [
   {
     title: "Faith",
     description:
-      "My faith in Jesus Christ keeps me grounded and reminds me to work with humility and purpose.",
+      "My faith in Jesus Christ keeps me grounded and shapes how I approach life, work, and service.",
   },
   {
     title: "Family",
